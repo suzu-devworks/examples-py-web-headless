@@ -9,4 +9,6 @@
     "--line-length",
     "100",
   ],
+  "terminal.integrated.environmentChangesRelaunch": true,
+  "python.terminal.activateEnvironment": true,
 }
