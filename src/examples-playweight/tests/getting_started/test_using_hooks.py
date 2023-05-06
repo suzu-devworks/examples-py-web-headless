@@ -10,6 +10,7 @@ def before_each_after_each(page: Page):
     yield
     print("afterEach")
 
+
 def test_main_navigation(page: Page):
     # Assertions use the expect API.
     expect(page).to_have_url("https://playwright.dev/")

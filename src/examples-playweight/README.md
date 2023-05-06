@@ -27,6 +27,7 @@ pdm install
 ```shell
 # create virtual environment
 python -m venv .venv 
+. .venv/bin/activate
 
 # upgrade base packages.
 python -m pip install --upgrade pip

@@ -166,3 +166,4 @@ cython_debug/
 ##> Add
 [Tt]emp/
 .pdm-python
+.DS_Store
