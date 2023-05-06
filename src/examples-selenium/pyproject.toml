@@ -1,0 +1,29 @@
+[tool.pdm]
+
+[tool.pdm.dev-dependencies]
+dev = [
+  "flake8>=6.0.0",
+  "mypy>=1.2.0",
+  "black>=23.3.0",
+  "isort>=5.12.0",
+  "pytest-cov>=4.0.0",
+]
+
+[project]
+authors = [
+  {name = "A.suzuki", email = "suzu.devworks@gmail.com"},
+]
+dependencies = [
+    "selenium>=4.9.0",
+    "webdriver-manager>=3.8.6",
+]
+description = ""
+license = {text = "MIT"}
+name = "examples-selenium"
+readme = "README.md"
+requires-python = ">=3.11"
+version = "0.1.0"
+
+[build-system]
+build-backend = "pdm.backend"
+requires = ["pdm-backend"]
