@@ -1,14 +1,11 @@
 {
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
-  "python.formatting.provider": "none",
-  "python.formatting.blackArgs": [
-    "--line-length",
-    "79",
-  ],
   "terminal.integrated.environmentChangesRelaunch": true,
   "python.terminal.activateEnvironment": true,
+  "python.terminal.activateEnvInCurrentTerminal": true,
   "python.testing.pytestEnabled": true,
+  "python.testing.autoTestDiscoverOnSaveEnabled": false,
   "python.analysis.autoFormatStrings": false,
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter",
@@ -17,4 +14,10 @@
       "source.organizeImports": true,
     },
   },
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true,
+  "python.linting.mypyEnabled": false,
+  "python.linting.lintOnSave": true,
+  "python.formatting.provider": "black",
 }

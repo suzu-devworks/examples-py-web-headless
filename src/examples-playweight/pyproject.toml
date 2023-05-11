@@ -5,8 +5,8 @@ authors = [
   {name = "A.suzuki", email = "suzu.devworks@gmail.com"},
 ]
 dependencies = [
-    "pytest-playwright>=0.3.3",
-    "requests==2.29.0",
+  "pytest-playwright>=0.3.3",
+  "requests==2.29.0",
 ]
 description = ""
 license = {text = "MIT"}
@@ -26,4 +26,21 @@ dev = [
   "mypy>=1.2.0",
   "isort>=5.12.0",
   "pytest-cov>=4.0.0",
+  "pyclean>=2.7.0",
 ]
+
+[tool.pytest.ini_options]
+addopts = "-p no:cacheprovider"
+
+[tool.black]
+line-length = 119
+
+[tool.isort]
+line_length = 119
+profile = "black"
+
+[tool.pdm.scripts]
+clean = "pyclean ."
+cleanx = {shell = "find . | grep -E \"(/__pycache__$|\\.pyc$|\\.pyo$)\" | xargs rm -rf"}
+lint = "flake8"
+test = "pytest"

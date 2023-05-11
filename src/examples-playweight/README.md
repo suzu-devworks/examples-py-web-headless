@@ -8,7 +8,7 @@ Playwright is a framework for Web Testing and Automation. It allows testing Chro
 - https://github.com/microsoft/playwright-python
 
 
-## Setups
+## Setups 
 
 ```shell
 clone https://github.com/suzu-devworks/examples-py-web-uitesting.git
@@ -19,6 +19,17 @@ cd src/examples-playweight
 pdm use
 pdm install
 
+```
+
+
+## Install browsers
+
+```shell
+# browsers.
+playwright install
+
+# dependencies.
+playwright install-deps
 ```
 
 
@@ -45,7 +56,5 @@ pdm add -d flake8 mypy black isort pytest-cov
 
 # install playwright
 pdm add pytest-playwright
-playwright install
-playwright install-deps
 
 ```
