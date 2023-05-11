@@ -7,6 +7,7 @@ dev = [
   "black>=23.3.0",
   "isort>=5.12.0",
   "pytest-cov>=4.0.0",
+  "pyclean>=2.7.0",
 ]
 
 [project]
@@ -14,8 +15,8 @@ authors = [
   {name = "A.suzuki", email = "suzu.devworks@gmail.com"},
 ]
 dependencies = [
-    "selenium>=4.9.0",
-    "webdriver-manager>=3.8.6",
+  "selenium>=4.9.0",
+  "webdriver-manager>=3.8.6",
 ]
 description = ""
 license = {text = "MIT"}
@@ -27,3 +28,18 @@ version = "0.1.0"
 [build-system]
 build-backend = "pdm.backend"
 requires = ["pdm-backend"]
+
+[tool.pytest.ini_options]
+addopts = "-p no:cacheprovider"
+
+[tool.black]
+line-length = 119
+
+[tool.isort]
+line_length = 119
+profile = "black"
+
+[tool.pdm.scripts]
+clean = "pyclean ."
+lint = "flake8"
+test = "pytest"

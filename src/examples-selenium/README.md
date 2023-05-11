@@ -23,6 +23,30 @@ pdm install
 ```
 
 
+## Install browsers and Web drivers
+
+### Chromium 
+
+- https://chromedriver.chromium.org/downloads
+
+For linux/aarch64.
+
+```shell
+sudo apt install chromium chromium-driver
+```
+
+in `/usr/bin/chromedriver`
+
+### Firefox 
+
+- https://github.com/mozilla/geckodriver/releases
+
+For linux/aarch64 with webdriver-manager.
+
+```shell
+sudo apt install firefox-esr
+```
+
 ## Create projects
 
 ```shell

@@ -1,9 +1,19 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
+
+"""
+see also.
+- [selenium](https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/python/tests/getting_started/test_first_script.py)
+"""  # noqa E501
 
 
 def test_eight_components():
-    driver = webdriver.Chrome()
+    options = Options()
+    # options.add_argument("--headless")
+    options.add_argument("-no-sandbox")
+
+    driver = webdriver.Chrome(options=options)
 
     driver.get("https://www.selenium.dev/selenium/web/web-form.html")
 
