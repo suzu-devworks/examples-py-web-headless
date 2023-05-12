@@ -167,3 +167,4 @@ cython_debug/
 [Tt]emp/
 .DS_Store
 .pdm-python
+trace.zip
