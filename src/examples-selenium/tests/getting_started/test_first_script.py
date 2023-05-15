@@ -10,7 +10,7 @@ see also.
 
 def test_eight_components():
     options = Options()
-    # options.add_argument("--headless")
+    options.add_argument("--headless")
     options.add_argument("-no-sandbox")
 
     driver = webdriver.Chrome(options=options)

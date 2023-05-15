@@ -1,5 +1,3 @@
-[tool.pdm]
-
 [project]
 authors = [
   {name = "A.suzuki", email = "suzu.devworks@gmail.com"},
