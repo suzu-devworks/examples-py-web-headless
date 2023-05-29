@@ -12,9 +12,9 @@
 ## Setups
 
 ```shell
-clone https://github.com/suzu-devworks/examples-py-web-uitesting.git
+clone https://github.com/suzu-devworks/examples-py-web-headless.git
 
-cd examples-py-web-uitesting
+cd examples-py-web-headless
 cd src/examples-selenium
 
 pdm use
