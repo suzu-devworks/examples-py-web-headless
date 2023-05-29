@@ -11,9 +11,9 @@ Playwright is a framework for Web Testing and Automation. It allows testing Chro
 ## Setups 
 
 ```shell
-clone https://github.com/suzu-devworks/examples-py-web-uitesting.git
+clone https://github.com/suzu-devworks/examples-py-web-headless.git
 
-cd examples-py-web-uitesting
+cd examples-py-web-headless
 cd src/examples-playweight
 
 pdm use

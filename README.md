@@ -1,3 +1,3 @@
-# examples-py-web-uitesting
+# examples-py-web-headless
 
-Workspace for studying Python Web UI Testing programming.
+Workspace for studying Python Web Headless programming.
