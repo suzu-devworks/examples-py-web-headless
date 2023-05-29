@@ -33,7 +33,7 @@ playwright install-deps
 ```
 
 
-## Create projects
+## Create project
 
 ```shell
 # create virtual environment
