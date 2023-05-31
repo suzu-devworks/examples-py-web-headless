@@ -1,0 +1,23 @@
+{
+  // IntelliSense を使用して利用可能な属性を学べます。
+  // 既存の属性の説明をホバーして表示します。
+  // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "DEBUG examples-gdrive",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/examples-gdrive/examples_gdrive/console/command.py",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "cwd": "${workspaceFolder}/temp",
+      "args": [
+        "--auth=user",
+        "gsheets",
+        "create",
+        "-d=1qP0JlcL5DGnF79XHzUJFdNwYCHoVepEJ"
+      ]
+    }
+  ]
+}

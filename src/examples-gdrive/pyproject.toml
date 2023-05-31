@@ -1,0 +1,54 @@
+
+[project]
+authors = [
+  {name = "A.suzuki", email = "suzu.devworks@gmail.com"},
+]
+dependencies = [
+  "gspread>=5.9.0",
+  "google-api-python-client>=2.87.0",
+  "google-auth>=2.19.0",
+  "google-auth-oauthlib>=1.0.0",
+  "pyyaml>=6.0",
+]
+description = ""
+dynamic = ["version"]
+license = {text = "MIT"}
+name = "examples-gdrive"
+readme = "README.md"
+requires-python = ">=3.11"
+
+[project.scripts]
+examples-gdrive-cli = "examples_gdrive.console.command:main"
+
+[tool.pdm]
+version = {source = "file", path = "examples_gdrive/__init__.py"}
+
+[tool.pdm.dev-dependencies]
+dev = [
+  "flake8>=6.0.0",
+  "mypy>=1.3.0",
+  "black>=23.3.0",
+  "isort>=5.12.0",
+  "pytest-cov>=4.1.0",
+  "pyclean>=2.7.3",
+]
+
+[build-system]
+build-backend = "pdm.backend"
+requires = ["pdm-backend"]
+
+[tool.pytest.ini_options]
+addopts = "-p no:cacheprovider"
+
+[tool.black]
+line-length = 119
+
+[tool.isort]
+line_length = 119
+profile = "black"
+
+[tool.pdm.scripts]
+clean = "pyclean ."
+cleanx = {shell = "find . | grep -E \"(/__pycache__$|\\.pyc$|\\.pyo$|/build$|/dist$|\\.egg-info$)\" | xargs rm -rf"}
+lint = "flake8"
+test = "pytest"
