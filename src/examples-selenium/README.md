@@ -47,7 +47,7 @@ For linux/aarch64 with webdriver-manager.
 sudo apt install firefox-esr
 ```
 
-## Create projects
+## Create project
 
 ```shell
 # create virtual environment
