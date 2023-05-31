@@ -55,6 +55,18 @@ def __parse_arguments() -> Namespace:
     gdrive_parser = subparsers.add_parser("gdrive", help="Google drive API example")
     configure_gdrive(gdrive_parser)
 
+    # gsheets
+    from examples_gdrive.console._gsheets import configure_parser as configure_gsheets
+
+    gspread_parser = subparsers.add_parser("gsheets", help="Google Sheets API example")
+    configure_gsheets(gspread_parser)
+
+    # gspread
+    from examples_gdrive.console._gspread import configure_parser as configure_gspread
+
+    gspread_parser = subparsers.add_parser("gspread", help="Python API for Google Sheets example")
+    configure_gspread(gspread_parser)
+
     args = parser.parse_args()
 
     return args

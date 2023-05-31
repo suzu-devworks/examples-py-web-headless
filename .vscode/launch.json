@@ -14,7 +14,9 @@
       "cwd": "${workspaceFolder}/temp",
       "args": [
         "--auth=user",
-        "gdrive",
+        "gsheets",
+        "create",
+        "-d=1qP0JlcL5DGnF79XHzUJFdNwYCHoVepEJ"
       ]
     }
   ]
