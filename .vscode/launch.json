@@ -5,10 +5,10 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "DEBUG examples-gdrive",
+      "name": "DEBUG examples-gcloud",
       "type": "python",
       "request": "launch",
-      "program": "${workspaceFolder}/src/examples-gdrive/examples_gdrive/console/command.py",
+      "program": "${workspaceFolder}/src/examples-gcloud/examples_gcloud/console/command.py",
       "console": "integratedTerminal",
       "justMyCode": true,
       "cwd": "${workspaceFolder}/temp",

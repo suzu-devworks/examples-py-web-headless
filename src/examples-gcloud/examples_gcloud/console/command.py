@@ -4,19 +4,19 @@ from importlib.resources import files as resource_files
 from logging.config import dictConfig
 
 import yaml
-from examples_gdrive import __version__
-from examples_gdrive.gauth import AuthAccount, get_credentials
+from examples_gcloud import __version__
+from examples_gcloud.gauth import AuthAccount, get_credentials
 
-with resource_files("examples_gdrive.resources").joinpath("logging_config.yaml").open() as file:
+with resource_files("examples_gcloud.resources").joinpath("logging_config.yaml").open() as file:
     config_dict = yaml.safe_load(file)
 dictConfig(config_dict)
 
-logger = logging.getLogger("examples_gdrive")
+logger = logging.getLogger("examples_gcloud")
 
 
 def __parse_arguments() -> Namespace:
     parser = ArgumentParser(
-        description="console examples for argparse.",
+        description="Google Cloud API programming examples.",
         formatter_class=RawTextHelpFormatter,
     )
     parser.add_argument(
@@ -50,19 +50,19 @@ def __parse_arguments() -> Namespace:
     )
 
     # gdrive
-    from examples_gdrive.console._gdrive import configure_parser as configure_gdrive
+    from examples_gcloud.console._gdrive import configure_parser as configure_gdrive
 
     gdrive_parser = subparsers.add_parser("gdrive", help="Google drive API example")
     configure_gdrive(gdrive_parser)
 
     # gsheets
-    from examples_gdrive.console._gsheets import configure_parser as configure_gsheets
+    from examples_gcloud.console._gsheets import configure_parser as configure_gsheets
 
     gspread_parser = subparsers.add_parser("gsheets", help="Google Sheets API example")
     configure_gsheets(gspread_parser)
 
     # gspread
-    from examples_gdrive.console._gspread import configure_parser as configure_gspread
+    from examples_gcloud.console._gspread import configure_parser as configure_gspread
 
     gspread_parser = subparsers.add_parser("gspread", help="Python API for Google Sheets example")
     configure_gspread(gspread_parser)

@@ -1,28 +1,52 @@
-# examples playwright
+# examples-playweight
 
-Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API
+Microsoft Playwright programing example.
+
+[![pdm-managed](https://img.shields.io/badge/pdm-managed-blueviolet)](https://pdm.fming.dev)
+
+> Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API
 
 ## References
 
 - https://playwright.dev/python/
 - https://github.com/microsoft/playwright-python
 
+## Setup
 
-## Setups 
+Clone the repository:
 
 ```shell
 clone https://github.com/suzu-devworks/examples-py-web-headless.git
 
 cd examples-py-web-headless
+
+```
+
+Create a virtualenv in advance:
+
+```shell
+python -m venv .venv
+. .venv/bin/activate
+
+python -m pip install --upgrade pip
+pip install pdm
+
+```
+
+Here's how this project is setup:
+
+```shell
 cd src/examples-playweight
 
+# select interpreter
 pdm use
+
+# install dependencies and self.
 pdm install
 
 ```
 
-
-## Install browsers
+## Install headless browsers
 
 ```shell
 # browsers.
@@ -32,21 +56,11 @@ playwright install
 playwright install-deps
 ```
 
-
 ## Create project
 
+This project was generated with the command:
+
 ```shell
-# create virtual environment
-python -m venv .venv 
-. .venv/bin/activate
-
-# upgrade base packages.
-python -m pip install --upgrade pip
-python -m pip install --upgrade setuptools
-
-# add Package manager(PDM).
-pip install pdm
-
 mkdir -p src/examples-playweight
 cd src/examples-playweight
 
@@ -54,7 +68,6 @@ cd src/examples-playweight
 pdm init
 pdm add -d flake8 mypy black isort pytest-cov
 
-# install playwright
 pdm add pytest-playwright
 
 ```
