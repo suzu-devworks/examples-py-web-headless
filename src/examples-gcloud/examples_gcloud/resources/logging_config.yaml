@@ -9,7 +9,7 @@ handlers:
     level: DEBUG
     formatter: default
 loggers:
-  examples_gdrive:
+  examples_gcloud:
     level: DEBUG
     handlers:
       - console

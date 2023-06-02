@@ -1,4 +1,8 @@
-# examples google drive api
+# examples-gcloud
+
+Google Cloud API programming examples.
+
+[![pdm-managed](https://img.shields.io/badge/pdm-managed-blueviolet)](https://pdm.fming.dev)
 
 ## References
 
@@ -7,24 +11,46 @@
 - https://googleapis.dev/python/google-auth/latest/index.html
 - https://docs.gspread.org/en/latest/index.html
 
-## Setups
+## Setup
+
+Clone the repository:
 
 ```shell
 clone https://github.com/suzu-devworks/examples-py-web-headless.git
 
 cd examples-py-web-headless
-cd src/examples-gdrive
 
+```
+
+Create a virtualenv in advance:
+
+```shell
+python -m venv .venv
+. .venv/bin/activate
+
+python -m pip install --upgrade pip
+pip install pdm
+
+```
+
+Here's how this project is setup:
+
+```shell
+cd src/examples-gcloud
+
+# select interpreter
 pdm use
+
+# install dependencies and self.
 pdm install
 
 ```
 
-## Configure Google API
+## Configure Google Clound API
 
 Goto google cloud platforms site:
 
-https://console.cloud.google.com/welcome
+- https://console.cloud.google.com/welcome
 
 ### Enable APIs
 
@@ -64,26 +90,16 @@ https://console.cloud.google.com/welcome
 
 ## Create project
 
+This project was generated with the command:
+
 ```shell
-# create virtual environment
-python -m venv .venv
-. .venv/bin/activate
-
-# upgrade base packages.
-python -m pip install --upgrade pip
-python -m pip install --upgrade setuptools
-
-# add Package manager(PDM).
-pip install pdm
-
-mkdir -p src/examples-gdrive
-cd src/examples-gdrive
+mkdir -p src/examples-gcloud
+cd src/examples-gcloud
 
 # create new pyproject.toml
 pdm init
 pdm add -d flake8 mypy black isort pytest-cov pyclean
 
-# install google library
 pdm add gspread google-api-python-client google-auth google-auth-oauthlib
 
 ```

@@ -4,24 +4,24 @@ authors = [
   {name = "A.suzuki", email = "suzu.devworks@gmail.com"},
 ]
 dependencies = [
-  "gspread>=5.9.0",
-  "google-api-python-client>=2.87.0",
-  "google-auth>=2.19.0",
-  "google-auth-oauthlib>=1.0.0",
-  "pyyaml>=6.0",
+    "gspread>=5.9.0",
+    "google-api-python-client>=2.87.0",
+    "google-auth>=2.19.0",
+    "google-auth-oauthlib>=1.0.0",
+    "pyyaml>=6.0",
 ]
 description = ""
 dynamic = ["version"]
 license = {text = "MIT"}
-name = "examples-gdrive"
+name = "examples-gcloud"
 readme = "README.md"
 requires-python = ">=3.11"
 
 [project.scripts]
-examples-gdrive-cli = "examples_gdrive.console.command:main"
+examples-gcloud-cli = "examples_gcloud.console.command:main"
 
 [tool.pdm]
-version = {source = "file", path = "examples_gdrive/__init__.py"}
+version = {source = "file", path = "examples_gcloud/__init__.py"}
 
 [tool.pdm.dev-dependencies]
 dev = [
