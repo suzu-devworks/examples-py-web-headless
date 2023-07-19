@@ -4,6 +4,7 @@ from importlib.resources import files as resource_files
 from logging.config import dictConfig
 
 import yaml
+
 from examples_gcloud import __version__
 from examples_gcloud.gauth import AuthAccount, get_credentials
 

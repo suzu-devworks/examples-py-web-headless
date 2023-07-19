@@ -27,6 +27,13 @@ dev = [
   "pyclean>=2.7.0",
 ]
 
+[tool.pdm.scripts]
+clean = {composite = ["pyclean .", "clean_dirs"]}
+clean_dirs = {shell = "find . | grep -E \"(/__pycache__$|\\.pyc$|\\.pyo$|/build$|/dist$|\\..+_cache$)\" | xargs rm -rf"}
+format = {composite = ["isort .", "black ."]}
+lint = {composite = ["flake8", "mypy ."]}
+test = "pytest --cov=. --cov-branch --cov-report xml"
+
 [tool.pytest.ini_options]
 addopts = "-p no:cacheprovider"
 
@@ -37,8 +44,46 @@ line-length = 119
 line_length = 119
 profile = "black"
 
-[tool.pdm.scripts]
-clean = "pyclean ."
-cleanx = {shell = "find . | grep -E \"(/__pycache__$|\\.pyc$|\\.pyo$)\" | xargs rm -rf"}
-lint = "flake8"
-test = "pytest"
+[tool.mypy]
+## Import discovery
+files = []
+
+## Platform configuration
+python_version = 3.11
+
+## Disallow dynamic typing
+disallow_subclassing_any = true
+
+## Untyped definitions and call
+disallow_incomplete_defs = true
+disallow_untyped_calls = true
+disallow_untyped_decorators = true
+disallow_untyped_defs = true
+
+## None and Optional handling
+no_implicit_optional = true
+strict_optional = true
+
+## Configuring warnings
+#warn_unreachable = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unused_configs = true
+warn_unused_ignores = true
+
+## Suppressing errors
+
+## Miscellaneous strictness flags
+#no_implicit_reexport = true
+allow_redefinition = true
+local_partial_types = true
+strict = true
+strict_equality = true
+
+## Configuring error messages
+pretty = true
+show_error_context = true
+
+[[mypy.overrides]]
+ignore_missing_imports = true
+module = []
