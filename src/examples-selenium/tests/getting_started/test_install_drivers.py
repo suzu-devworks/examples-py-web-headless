@@ -13,21 +13,16 @@ see also.
 
 
 @pytest.mark.skip(reason="Do not run in CI")
-def test_driver_manager_chrome():
+def test_driver_manager_chrome() -> None:
     """
     WebDriverException: Message: Service /home/vscode/.wdm/drivers/chromedriver/linux64/113.0.5672.63/chromedriver unexpectedly exited. Status code was: 255
     """  # noqa E501
-    driver = webdriver.Chrome(
-        service=ChromiumService(
-            ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()
-        )
-    )
-
+    driver = webdriver.Chrome(service=ChromiumService(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()))
     driver.quit()
 
 
 @pytest.mark.skip(reason="Do not run in CI")
-def test_driver_manager_firefox():
+def test_driver_manager_firefox() -> None:
     driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
 
     driver.quit()
