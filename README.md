@@ -1,3 +1,3 @@
-# examples-py-web-headless
+# examples-py-headless
 
-Workspace for studying Python Web Headless programming.
+Workspace for studying Python Headless programming.
